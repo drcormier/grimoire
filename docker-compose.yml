@@ -18,6 +18,8 @@ services:
   grimoire:
     image: goniszewski/grimoire:latest
     container_name: grimoire
+    env:
+      - 'ORIGIN:$ORIGIN'
     restart: unless-stopped
     build:
       context: .
